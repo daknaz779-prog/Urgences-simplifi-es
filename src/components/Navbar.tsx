@@ -63,7 +63,7 @@ export default function Navbar() {
               href="https://docs.google.com/forms/d/e/1FAIpQLScXXMHbWD_OyxpOMTInOGAUI2m-HaX5wZxWcnNyE5DQ-9QyRg/viewform"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#4c2882] hover:bg-[#3a1e63] text-white px-5 py-2.5 rounded-md text-sm font-semibold transition-all"
+              className="bg-slate-100 hover:bg-slate-200 text-[#4c2882] px-5 py-2.5 rounded-md text-sm font-semibold transition-all shadow-sm"
             >
               {language === 'ar' ? 'سجل الآن' : 'Accéder maintenant'}
             </a>
@@ -117,7 +117,7 @@ export default function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsOpen(false)}
-                className="block w-full text-center bg-[#4c2882] hover:bg-[#3a1e63] text-white px-5 py-3 rounded-md text-base font-semibold transition-colors"
+                className="block w-full text-center bg-slate-100 hover:bg-slate-200 text-[#4c2882] px-5 py-3 rounded-md text-base font-semibold transition-colors shadow-sm"
               >
                 {language === 'ar' ? 'سجل الآن' : 'Accéder maintenant'}
               </a>

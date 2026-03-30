@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <div className="bg-white dark:bg-slate-950 transition-colors">
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center overflow-hidden bg-[#0f0a1a]">
+      <section className="relative min-h-[60vh] flex items-center overflow-hidden bg-[#0f0a1a]">
         {/* Background Image */}
         <img 
           src="https://files.catbox.moe/j2bjta.jpeg"
@@ -36,7 +36,7 @@ export default function Home() {
         {/* Gradient Overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#0f0a1a] via-[#0f0a1a]/10 to-transparent pointer-events-none"></div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20 lg:py-32 pointer-events-none" dir="ltr">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-20 pb-4 lg:pt-32 lg:pb-8 pointer-events-none" dir="ltr">
           <div className="max-w-3xl pointer-events-auto" dir={language === 'ar' ? 'rtl' : 'ltr'}>
             <h1 className="text-6xl md:text-7xl lg:text-[5.25rem] font-extrabold text-white tracking-tight leading-[1.05] mb-8">
               {language === 'ar' ? (
@@ -73,7 +73,7 @@ export default function Home() {
                 href="https://docs.google.com/forms/d/e/1FAIpQLScXXMHbWD_OyxpOMTInOGAUI2m-HaX5wZxWcnNyE5DQ-9QyRg/viewform"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-[#4c2882] hover:bg-[#4c2882]/20 text-[#b673f8] rounded-md font-bold text-lg transition-colors"
+                className="inline-flex items-center justify-center px-8 py-4 bg-slate-100 hover:bg-slate-200 text-[#4c2882] rounded-md font-bold text-lg transition-colors shadow-sm"
               >
                 {language === 'ar' ? 'سجل الآن' : 'Accéder maintenant'}
               </a>
@@ -102,7 +102,7 @@ export default function Home() {
       </section>
 
       {/* The Solution Section */}
-      <section className="pt-2 pb-20 bg-slate-900 dark:bg-slate-950 text-white transition-colors">
+      <section className="pt-[28px] pb-20 bg-slate-900 dark:bg-slate-950 text-white transition-colors">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-16">
             {language === 'ar' ? 'ما الذي يجعل نهجنا ' : 'Ce qui rend notre approche '}
