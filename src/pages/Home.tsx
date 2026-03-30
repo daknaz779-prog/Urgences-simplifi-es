@@ -18,77 +18,86 @@ export default function Home() {
   return (
     <div className="bg-white dark:bg-slate-950 transition-colors">
       {/* Hero Section */}
-      <section className="relative bg-[#fafafa] dark:bg-slate-900 overflow-hidden pt-8 pb-24 lg:pt-12 lg:pb-32 transition-colors">
-        <div className="absolute inset-0 text-slate-200 dark:text-slate-800" style={{ backgroundImage: 'radial-gradient(currentColor 1px, transparent 1px)', backgroundSize: '24px 24px' }}></div>
+      <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-[#0f0a1a]">
+        {/* Background Image */}
+        <img 
+          src="https://files.catbox.moe/j2bjta.jpeg"
+          alt="Hero Background"
+          className="absolute max-w-none opacity-90 object-cover"
+          style={{ 
+            width: '150vw', 
+            height: '150vh',
+            top: '-521px', 
+            left: '-60px' 
+          }}
+          referrerPolicy="no-referrer"
+        />
+        
+        {/* Gradient Overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0f0a1a] via-[#0f0a1a]/40 to-transparent pointer-events-none"></div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" dir="ltr">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
-            {/* Left Content */}
-            <div className="max-w-2xl" dir={language === 'ar' ? 'rtl' : 'ltr'}>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#1a1a1a] dark:text-white tracking-tight leading-[1.1] mb-6">
-                {language === 'ar' ? 'أتقن التعامل مع الحالات الطارئة بدقة ' : 'Maîtrisez les urgences avec une précision '}
-                <span className="text-[#4c2882] dark:text-purple-400 italic">{language === 'ar' ? 'سريرية' : 'Clinique'}</span>
-              </h1>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-20 lg:py-32 pointer-events-none" dir="ltr">
+          <div className="max-w-3xl pointer-events-auto" dir={language === 'ar' ? 'rtl' : 'ltr'}>
+            <h1 className="text-6xl md:text-7xl lg:text-[5.25rem] font-extrabold text-white tracking-tight leading-[1.05] mb-8">
+              {language === 'ar' ? (
+                <>
+                  أتقن التعامل مع<br />
+                  الحالات الطارئة بدقة<br />
+                  <span className="text-[#b673f8] italic">سريرية</span>
+                </>
+              ) : (
+                <>
+                  Maîtrisez les<br />
+                  urgences avec<br />
+                  une précision<br />
+                  <span className="text-[#b673f8] italic">Clinique</span>
+                </>
+              )}
+            </h1>
 
-              <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 leading-relaxed mb-10">
-                {language === 'ar' 
-                  ? 'كن مستعداً للتصرف بفعالية في قسم الطوارئ منذ يومك الأول. طور ثقتك السريرية من خلال دورات تدريبية مكيفة مع واقع الميدان في الجزائر.'
-                  : 'Soyez prêt(e) à agir efficacement aux urgences dès votre premier jour. Développez votre confiance clinique avec des formations adaptées à la réalité du terrain en Algérie.'}
-              </p>
+            <p className="text-lg md:text-xl text-slate-300 leading-relaxed mb-10 max-w-2xl">
+              {language === 'ar' 
+                ? 'كن مستعداً للتصرف بفعالية في قسم الطوارئ منذ يومك الأول. طور ثقتك السريرية من خلال دورات تدريبية مكيفة مع واقع الميدان في الجزائر.'
+                : 'Soyez prêt(e) à agir efficacement aux urgences dès votre premier jour. Développez votre confiance clinique avec des formations adaptées à la réalité du terrain en Algérie.'}
+            </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 mb-12">
-                <Link
-                  to="/formations"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-[#4c2882] hover:bg-[#3a1e63] text-white rounded-md font-bold text-lg transition-colors gap-2"
-                >
-                  {language === 'ar' ? 'اكتشف الدورات' : 'Découvrir les formations'}
-                  <ArrowRight className={`w-5 h-5 ${language === 'ar' ? 'rotate-180' : ''}`} />
-                </Link>
-                <a
-                  href="https://docs.google.com/forms/d/e/1FAIpQLScXXMHbWD_OyxpOMTInOGAUI2m-HaX5wZxWcnNyE5DQ-9QyRg/viewform"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-white dark:bg-slate-900 border-2 border-[#f1f1f1] dark:border-slate-700 hover:border-[#4c2882] dark:hover:border-purple-400 text-[#4c2882] dark:text-purple-400 rounded-md font-bold text-lg transition-colors"
-                >
-                  {language === 'ar' ? 'سجل الآن' : 'Accéder maintenant'}
-                </a>
-              </div>
-            </div>
-
-            {/* Right Image */}
-            <div className="relative lg:ml-10">
-              <motion.div
-                animate={{ y: [-10, 10, -10] }}
-                transition={{ repeat: Infinity, duration: 4.8, ease: "easeInOut" }}
+            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+              <Link
+                to="/formations"
+                className="inline-flex items-center justify-center px-8 py-4 bg-[#4c2882] hover:bg-[#3a1e63] text-white rounded-md font-bold text-lg transition-colors gap-2"
               >
-                <div className="relative rounded-sm bg-white dark:bg-slate-800 p-3 shadow-2xl transform rotate-3 transition-transform hover:rotate-0 duration-500">
-                  <img
-                    src="https://files.catbox.moe/zt8ea6.jpg"
-                    alt="Salle d'urgence"
-                    className="rounded-sm w-full h-auto object-cover"
-                    referrerPolicy="no-referrer"
-                  />
-                  
-                  {/* Floating Widget */}
-                  <div 
-                    className={`absolute -bottom-6 ${language === 'ar' ? '-right-6' : '-left-6'} bg-white dark:bg-slate-900 p-4 rounded-md shadow-xl border border-slate-100 dark:border-slate-800 flex items-center gap-4 transform -rotate-3`}
-                  >
-                    <div className="w-10 h-10 rounded-full overflow-hidden border border-slate-200 dark:border-slate-700 flex-shrink-0">
-                      <img src="https://files.catbox.moe/wo8ltz.jpg" alt="Logo" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
-                    </div>
-                    <div>
-                      <div className="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
-                        {language === 'ar' ? 'محاكاة الواقع' : 'Mise en situation'}
-                      </div>
-                      <div className="font-bold text-slate-900 dark:text-white text-sm">
-                        {language === 'ar' ? 'حالات سريرية حقيقية' : 'Cas Cliniques Réels'}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
+                {language === 'ar' ? 'اكتشف الدورات' : 'Découvrir les formations'}
+                <ArrowRight className={`w-5 h-5 ${language === 'ar' ? 'rotate-180' : ''}`} />
+              </Link>
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLScXXMHbWD_OyxpOMTInOGAUI2m-HaX5wZxWcnNyE5DQ-9QyRg/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-[#4c2882] hover:bg-[#4c2882]/20 text-[#b673f8] rounded-md font-bold text-lg transition-colors"
+              >
+                {language === 'ar' ? 'سجل الآن' : 'Accéder maintenant'}
+              </a>
             </div>
           </div>
+
+          {/* Floating Widget */}
+          <motion.div 
+            className={`hidden md:flex absolute bottom-1/4 ${language === 'ar' ? 'left-10 lg:left-1/4' : 'right-10 lg:right-1/4'} bg-[#1e1b2e]/90 backdrop-blur-md p-4 rounded-xl shadow-2xl border border-white/10 items-center gap-4 pointer-events-auto`}
+            animate={{ y: [-5, 5, -5] }}
+            transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+          >
+            <div className="w-10 h-10 rounded-full overflow-hidden border border-slate-700 flex-shrink-0 bg-purple-900/50 flex items-center justify-center">
+              <img src="https://files.catbox.moe/wo8ltz.jpg" alt="Logo" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+            </div>
+            <div>
+              <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">
+                {language === 'ar' ? 'محاكاة الواقع' : 'Mise en situation'}
+              </div>
+              <div className="font-bold text-white text-sm">
+                {language === 'ar' ? 'حالات سريرية حقيقية' : 'Cas Cliniques Réels'}
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
