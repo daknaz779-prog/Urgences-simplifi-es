@@ -16,7 +16,7 @@ export default function Home() {
   const { language } = useLanguage();
 
   return (
-    <div className="bg-white dark:bg-slate-950 transition-colors pt-[200px]">
+    <div className="bg-white dark:bg-slate-950 transition-colors">
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center overflow-hidden bg-[#0f0a1a]">
         {/* Background Image */}
@@ -36,7 +36,7 @@ export default function Home() {
         {/* Gradient Overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#0f0a1a] via-[#0f0a1a]/10 to-transparent pointer-events-none"></div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-20 pb-4 lg:pt-32 lg:pb-8 pointer-events-none" dir="ltr">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-20 pb-4 lg:pt-32 lg:pb-8 pointer-events-none mt-[200px]" dir="ltr">
           <div className="max-w-3xl pointer-events-auto" dir={language === 'ar' ? 'rtl' : 'ltr'}>
             <h1 className="text-6xl md:text-7xl lg:text-[5.25rem] font-extrabold text-white tracking-tight leading-[1.05] mb-8">
               {language === 'ar' ? (
@@ -82,7 +82,7 @@ export default function Home() {
 
           {/* Floating Widget */}
           <motion.div 
-            className={`hidden md:flex absolute top-[265px] ml-[20px] ${language === 'ar' ? 'left-10 lg:left-1/4' : 'right-10 lg:right-1/4'} bg-[#1e1b2e]/90 backdrop-blur-md p-4 rounded-xl shadow-2xl border border-white/10 items-center gap-4 pointer-events-auto`}
+            className={`hidden md:flex absolute top-[465px] ml-[20px] ${language === 'ar' ? 'left-10 lg:left-1/4' : 'right-10 lg:right-1/4'} bg-[#1e1b2e]/90 backdrop-blur-md p-4 rounded-xl shadow-2xl border border-white/10 items-center gap-4 pointer-events-auto`}
             animate={{ y: [-5, 5, -5] }}
             transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
           >
