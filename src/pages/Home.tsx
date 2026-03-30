@@ -27,7 +27,7 @@ export default function Home() {
           style={{ 
             width: '150vw', 
             height: '150vh',
-            top: '-521px', 
+            bottom: '0px', 
             left: '-60px' 
           }}
           referrerPolicy="no-referrer"
@@ -82,7 +82,7 @@ export default function Home() {
 
           {/* Floating Widget */}
           <motion.div 
-            className={`hidden md:flex absolute top-24 ${language === 'ar' ? 'left-10 lg:left-1/4' : 'right-10 lg:right-1/4'} bg-[#1e1b2e]/90 backdrop-blur-md p-4 rounded-xl shadow-2xl border border-white/10 items-center gap-4 pointer-events-auto`}
+            className={`hidden md:flex absolute top-[265px] ml-[20px] ${language === 'ar' ? 'left-10 lg:left-1/4' : 'right-10 lg:right-1/4'} bg-[#1e1b2e]/90 backdrop-blur-md p-4 rounded-xl shadow-2xl border border-white/10 items-center gap-4 pointer-events-auto`}
             animate={{ y: [-5, 5, -5] }}
             transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
           >
@@ -102,7 +102,7 @@ export default function Home() {
       </section>
 
       {/* The Solution Section */}
-      <section className="pt-10 pb-20 bg-slate-900 dark:bg-slate-950 text-white transition-colors">
+      <section className="pt-2 pb-20 bg-slate-900 dark:bg-slate-950 text-white transition-colors">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-16">
             {language === 'ar' ? 'ما الذي يجعل نهجنا ' : 'Ce qui rend notre approche '}
