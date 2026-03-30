@@ -6,7 +6,6 @@ import {
   Stethoscope,
   BookOpen,
   MapPin,
-  HeartPulse,
   Send,
   Instagram,
   Facebook,
@@ -74,8 +73,8 @@ export default function Home() {
                   <div 
                     className={`absolute -bottom-6 ${language === 'ar' ? '-right-6' : '-left-6'} bg-white dark:bg-slate-900 p-4 rounded-md shadow-xl border border-slate-100 dark:border-slate-800 flex items-center gap-4 transform -rotate-3`}
                   >
-                    <div className="w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900/50 flex items-center justify-center">
-                      <HeartPulse className="w-5 h-5 text-[#4c2882] dark:text-purple-400" />
+                    <div className="w-10 h-10 rounded-full overflow-hidden border border-slate-200 dark:border-slate-700 flex-shrink-0">
+                      <img src="https://files.catbox.moe/wo8ltz.jpg" alt="Logo" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                     </div>
                     <div>
                       <div className="text-[10px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">

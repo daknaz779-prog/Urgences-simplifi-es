@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { HeartPulse, Mail, MapPin, Phone, MessageCircle, Instagram, Facebook } from "lucide-react";
+import { Mail, MapPin, Phone, MessageCircle, Instagram, Facebook } from "lucide-react";
 import { useLanguage } from "../contexts/LanguageContext";
 
 export default function Footer() {
@@ -12,8 +12,8 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-1 md:col-span-1 lg:col-span-1 space-y-4">
             <Link to="/" className="flex items-center gap-2 group">
-              <div className="bg-purple-900/50 p-2 rounded-lg border border-purple-800/50">
-                <HeartPulse className="w-6 h-6 text-purple-400" />
+              <div className="w-10 h-10 rounded-lg overflow-hidden border border-purple-800/50 flex-shrink-0">
+                <img src="https://files.catbox.moe/wo8ltz.jpg" alt="Logo" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
               </div>
               <span className="font-bold text-xl tracking-tight text-white">
                 Urgences<span className="text-orange-500">Simplifiées</span>
