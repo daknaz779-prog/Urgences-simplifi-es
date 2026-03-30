@@ -16,7 +16,7 @@ export default function Home() {
   const { language } = useLanguage();
 
   return (
-    <div className="bg-white dark:bg-slate-950 transition-colors">
+    <div className="bg-white dark:bg-slate-950 transition-colors pt-[200px]">
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center overflow-hidden bg-[#0f0a1a]">
         {/* Background Image */}
